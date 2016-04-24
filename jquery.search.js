@@ -1,4 +1,12 @@
-(function($){
+/*
+ * jQuery-search for jQuery
+ * 1.0.0, 23 April 2016
+ *
+ * Using the jQuery-search plugin, you can easily add a live search on your html pages
+ *
+ * Copyright 2016 @egoettelmann, https://github.com/egoettelmann/
+ * Released under the MIT License
+ */(function($){
  
     $.fn.jsearch = function( options ) {
  
