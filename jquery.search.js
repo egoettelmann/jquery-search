@@ -30,6 +30,8 @@
 					});
 					if (!found) {
 						row.hide();
+					} else {
+						row.show();
 					}
 				});
 			} else if (val.length == 0) {
