@@ -15,16 +15,24 @@
 			fieldClass: '.jsearch-field',
 			minLength: 3,
 			triggers: 'keyup',
+			caseSensitive: false,
         }, options );
 		
 		this.on(settings.triggers, function() {
-			var val = $(this).val().toLowerCase();
+			var val = $(this).val();
+			if (!settings.caseSensitive) {
+				val = val.toLowerCase();
+			}
 			if (val.length >= settings.minLength) {
 				$(settings.rowClass).each(function() {
 					var row = $(this);
 					var found = false;
 					$(settings.fieldClass, row).each(function() {
-						if ($(this).html().toLowerCase().indexOf(val) > -1) {
+						var content = $(this).html();
+						if (!settings.caseSensitive) {
+							content = content.toLowerCase();
+						}
+						if (content.indexOf(val) > -1) {
 							found = true;
 						}
 					});
