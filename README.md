@@ -27,10 +27,11 @@ $('input[type="text"').jsearch({
 ```
 
 The list of available options and their default values is shown in the following table.
-| Name          | Description                                                               | Default          |
-| ------------- |:-------------------------------------------------------------------------:| ----------------:|
-| rowClass      | the jQuery selector that is used to show/hide rows                        | '.jsearch-row'   |
-| fieldClass    | the jQuery selector that is used to identify the searchable elements      | '.jsearch-field' |
-| minLength     | the minimal length of the string to start the search                      | 3                |
-| triggers      | the events that trigger the search                                        | 'keyup'          |
-| caseSensitive | if the search has to be case sensitive or not                             | false            |
+
+| Name          | Description                                                               | Default            |
+| ------------- |---------------------------------------------------------------------------| -------------------|
+| rowClass      | the jQuery selector that is used to show/hide rows                        | `'.jsearch-row'`   |
+| fieldClass    | the jQuery selector that is used to identify the searchable elements      | `'.jsearch-field'` |
+| minLength     | the minimal length of the string to start the search                      | `3`                |
+| triggers      | the events that trigger the search                                        | `'keyup'`          |
+| caseSensitive | if the search has to be case sensitive or not                             | `false`            |
