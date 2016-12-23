@@ -12,7 +12,9 @@ and initialize it on an input
 $('input[type="text"').jsearch();
 </script>
 ```
-all elements annotated with a `.jsearch-row` class will be filtered out if they do not include a `.jsearch-field` element that matches the search.
+All elements annotated with a `.jsearch-row` class will be filtered out if they do not include a `.jsearch-field` element that matches the search.
+
+The `.jsearch-field` is not necessarily a text node. If it contains nested elements, the search will be performed in any of its children (see [jQuery.text](http://api.jquery.com/text/)).
 
 ## Options
 
@@ -35,3 +37,7 @@ The list of available options and their default values is shown in the following
 | minLength     | the minimal length of the string to start the search                      | `3`                |
 | triggers      | the events that trigger the search                                        | `'keyup'`          |
 | caseSensitive | if the search has to be case sensitive or not                             | `false`            |
+
+If the `rowClass` attribute is equal to the `fieldClass` attribute, the search is performed in the same element that is shown/hidden.
+
+**Note**: the `rowClass` and `fieldClass` attributes can be any css selectors.

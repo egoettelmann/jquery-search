@@ -1,6 +1,6 @@
 /*
  * jQuery-search for jQuery
- * 1.0.0, 23 April 2016
+ * 1.0.1, 23 December 2016
  *
  * Using the jQuery-search plugin, you can easily add a live search on your html pages
  *
@@ -17,6 +17,17 @@
 			triggers: 'keyup',
 			caseSensitive: false,
         }, options );
+        
+        var containsText = function(str, el, cs) {        	
+			var content = el.text();
+			if (!cs) {
+				content = content.toLowerCase();
+			}
+			if (content.indexOf(str) > -1) {
+				return true;
+			}
+			return false;
+        };
 		
 		this.on(settings.triggers, function() {
 			var val = $(this).val();
@@ -27,15 +38,14 @@
 				$(settings.rowClass).each(function() {
 					var row = $(this);
 					var found = false;
-					$(settings.fieldClass, row).each(function() {
-						var content = $(this).html();
-						if (!settings.caseSensitive) {
-							content = content.toLowerCase();
-						}
-						if (content.indexOf(val) > -1) {
-							found = true;
-						}
-					});
+					if (settings.rowClass !== settings.fieldClass) {
+						$(settings.fieldClass, row).each(function() {
+							found = containsText(val, $(this), settings.caseSensitive);
+							return !found;
+						});
+					} else {
+						found = containsText(val, row, settings.caseSensitive);
+					}
 					if (!found) {
 						row.hide();
 					} else {

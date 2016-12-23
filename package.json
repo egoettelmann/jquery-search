@@ -1,0 +1,24 @@
+{
+  "name": "jquery.search",
+  "version": "1.0.1",
+  "description": "A very simple and lightweight live search jQuery plugin: make your pages dynamic with two simple CSS classes.",
+  "main": "jquery.search.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoettelmann/jquery-search.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoettelmann/jquery-search/issues"
+  },
+  "homepage": "https://github.com/egoettelmann/jquery-search#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
