@@ -1,0 +1,14 @@
+{
+  "name": "jquery-search",
+  "description": "A very simple and lightweight live search jQuery plugin: make your pages dynamic with two simple CSS classes.",
+  "main": "jquery.search.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
